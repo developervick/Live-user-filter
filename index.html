@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="output.css" rel="stylesheet">
+    <style>
+        .one-line{
+            white-space: nowrap;
+            text-overflow: hidden;
+        }
+
+        .no-scrollbar::-webkit-scrollbar{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="body" class="grid justify-items-center items-center h-screen bg-gray-300">
+        <div id="userList" class="w-screen sm:w-[330px] overflow-hidden">
+            <div class="flex flex-col bg-slate-600 h-fit px-5 py-5 rounded-t-md">
+                <h1 class="text-3xl font-bold text-white">Live User Filter</h1>
+                <h5 class="text-lg font-semibold text-white">Search by name/or Location</h5>
+                <input id="search" class="rounded-full my-3 h-9 bg-slate-800 text-white font-semibold px-4 py-2 " placeholder="Search">
+            </div>
+            <div class="bg-white items-center justify-center rounded-b-md">
+                <ul id="userContainer" class="overflow-scroll h-[400px] no-scrollbar">
+                    <li id="userCard" class="bg-white flex px-3 py-2 items-center border-b-[2px] border-gray-200 w-24">
+                        <img src="" class="w-14 rounded-full">
+                        <div class="flex flex-col justify-self-start self-start justify-start mx-3">
+                            <h5 class="text-lg font-semibold">Loading......</h5>
+                            <h5 class="text-sm font-semibold one-line"></h5>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+<script type="module" src="index.js"></script>
+</body>
+</html>
